@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: prod
+  datasource:
+    url: jdbc:postgresql://localhost:5432/market1
+    username: miguel
+    password: admin
+
+server:
+  servlet:
+    context-path: /market/api
+---
+spring:
+  profiles: dev
+server:
+  port: 8090
+
+---
+spring:
+  profiles: prod
+server:
+  port: 8080
